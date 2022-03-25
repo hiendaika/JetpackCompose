@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyFirstCompose</string>
+    <string name="title_activity_puppies">PuppiesActivity</string>
+    <string name="gender">Sex</string>
+    <string name="age">Age</string>
+    <string name="personality">Personality</string>
+</resources>
