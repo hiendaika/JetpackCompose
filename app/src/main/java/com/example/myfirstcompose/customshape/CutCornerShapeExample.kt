@@ -24,13 +24,16 @@ fun CutCornerShapeExample(cornerSize: Dp) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(32.dp)
-            .border(2.dp, color = Color.Red, CutCornerShape(cornerSize))
+            .border(2.dp, color = Color.Red, CutCornerShape(cornerSize)) //Ve duong bao xung quanh composable vs do rong, shape, color
             .graphicsLayer {
                 shadowElevation = 8.dp.toPx()
                 shape = CutCornerShape(32.dp)
                 clip = true //shadow elevation match outline
             }
-            .background(color = Color.Green)
+                //Co the ket hop nhieu phuong thuc cua Modifier de lay duoc shape theo yeu cau
+                //Can chu y den van de thu tu cua chung, can chac chan rang luon goi background() sau
+                //graphiclayer{} de dam bao mau duoc ve 1 cach chinh xac
+            .background(color = Color.Green) //background cua text
             .padding(32.dp)
     )
 }
