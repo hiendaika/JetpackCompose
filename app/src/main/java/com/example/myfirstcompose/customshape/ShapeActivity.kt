@@ -1,6 +1,5 @@
-package com.example.myfirstcompose.puppies
+package com.example.myfirstcompose.customshape
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,9 +10,10 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.myfirstcompose.puppies.ui.theme.MyFirstComposeTheme
+import androidx.compose.ui.unit.dp
+import com.example.myfirstcompose.customshape.ui.theme.MyFirstComposeTheme
 
-class PuppiesActivity : ComponentActivity() {
+class ShapeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -23,27 +23,24 @@ class PuppiesActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-//                    Greeting2("Android")
-                    PuppiesApp {
-                        ProfileActivity.newIntent(this, it)
-                    }
+//                    Greeting4("Android")
+                    CutCornerShapeExample(cornerSize = 32.dp)
                 }
             }
         }
     }
 }
 
-
 @Composable
-fun Greeting2(name: String) {
+fun Greeting4(name: String) {
     Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview2() {
+fun DefaultPreview4() {
     MyFirstComposeTheme {
-//        Greeting2("Android")
-//        PuppiesApp()
+//        Greeting4("Android")
+        CutCornerShapeExample(cornerSize = 32.dp)
     }
 }

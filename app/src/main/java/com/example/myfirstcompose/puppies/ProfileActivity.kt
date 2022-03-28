@@ -13,7 +13,7 @@ class ProfileActivity : AppCompatActivity() {
     companion object {
         const val PUPPY_ID = "puppy_id"
         fun newIntent(context: Context, puppy: Puppy) {
-            context.startActivity(Intent().putExtra(PUPPY_ID, puppy))
+            context.startActivity(Intent(context,ProfileActivity::class.java).putExtra(PUPPY_ID, puppy))
         }
     }
 

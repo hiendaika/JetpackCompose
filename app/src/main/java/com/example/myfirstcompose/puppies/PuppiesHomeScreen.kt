@@ -15,6 +15,7 @@ fun PuppiesHomeScreen(navigateToProfile: (Puppy) -> Unit) {
     //Puppies
     val puppies = remember { DataPuppies.puppies }
 
+    //RecyclerView hien thi theo chieu doc
     LazyColumn(contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)) {
         items(
             items = puppies,
